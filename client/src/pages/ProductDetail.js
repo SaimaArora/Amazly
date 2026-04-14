@@ -13,34 +13,35 @@ function ProductDetail() {
 
   // eslint-disable-next-line
   useEffect(() => {
-    fetchProduct();
-  }, []);
-
     const fetchProduct = async () => {
-    try {
-        const res = await axios.get(`https://amazly-production.up.railway.app/api/products/${id}`);
-        const data = res.data;
-
-        // Helper to handle MySQL JSON vs String inconsistency
-        const parseImages = (imgData) => {
-        if (!imgData) return [];
-        // If it's already an array/object, don't parse it
-        if (typeof imgData !== 'string') return imgData; 
         try {
-            return JSON.parse(imgData);
-        } catch (e) {
-            return [];
-        }
-        };
+            const res = await axios.get(`https://amazly-production.up.railway.app/api/products/${id}`);
+            const data = res.data;
 
-        const imageArray = parseImages(data.images);
-        
-        setProduct(data);
-        setSelectedImg(imageArray.length > 0 ? imageArray[0] : data.image);
-    } catch (error) {
-        console.error("Error fetching product:", error);
-    }
+            // Helper to handle MySQL JSON vs String inconsistency
+            const parseImages = (imgData) => {
+            if (!imgData) return [];
+            // If it's already an array/object, don't parse it
+            if (typeof imgData !== 'string') return imgData; 
+            try {
+                return JSON.parse(imgData);
+            } catch (e) {
+                return [];
+            }
+            };
+
+            const imageArray = parseImages(data.images);
+            
+            setProduct(data);
+            setSelectedImg(imageArray.length > 0 ? imageArray[0] : data.image);
+        } catch (error) {
+            console.error("Error fetching product:", error);
+        }
     };
+    fetchProduct();
+  }, [id]);
+
+
 
   if (!product) return <h2>Loading...</h2>;
 

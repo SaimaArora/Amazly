@@ -13,15 +13,16 @@ function Home() {
 
   // eslint-disable-next-line
   useEffect(() => {
+      const fetchProducts = async () => {
+        const res = await axios.get(
+        `https://amazly-production.up.railway.app/api/products?search=${search}`
+        );
+        setProducts(res.data);
+        };
+
     fetchProducts();
   }, [search]);
 
-  const fetchProducts = async () => {
-    const res = await axios.get(
-      `https://amazly-production.up.railway.app/api/products?search=${search}`
-    );
-    setProducts(res.data);
-  };
 
   return (
     <div className="container">
