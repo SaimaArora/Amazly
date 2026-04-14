@@ -1,0 +1,168 @@
+/* GLOBAL CONTAINER */
+.cartPage {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background-color: #EAEDED; /* Amazon's light gray background */
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* LEFT SIDE: PRODUCT LIST */
+.cartLeft {
+  flex: 0.75;
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.cartLeft h2 {
+  font-weight: 500;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+/* INDIVIDUAL ITEM ROW */
+.cartItem {
+  display: flex;
+  border-bottom: 1px solid #DDD;
+  padding: 20px 0;
+  justify-content: space-between;
+}
+
+.cartItem img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* PRODUCT TEXT DETAILS */
+.itemDetails {
+  flex: 1;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.itemDetails h4 {
+  font-size: 18px;
+  color: #007185;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.itemDetails h4:hover {
+  color: #C7511F;
+  text-decoration: underline;
+}
+
+.stock {
+  color: #007600;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* QUANTITY & ACTIONS ROW */
+.itemActions {
+  display: flex;
+  align-items: center;
+  gap: 0px; /* Gap handled by dividers */
+  margin-top: auto; /* Pushes actions to the bottom of the details block */
+}
+
+.qtyContainer {
+  display: flex;
+  align-items: center;
+  background-color: #F0F2F2;
+  border: 1px solid #D5D9D9;
+  border-radius: 7px;
+  padding: 0 10px;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+}
+
+.qtyContainer label {
+  font-size: 13px;
+  color: #565959;
+}
+
+.qtyDropdown {
+  background: transparent;
+  border: none;
+  padding: 4px 0;
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* LINKS (Delete, Save for later) */
+.deleteLink, .saveForLaterLink {
+  color: #007185;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.deleteLink:hover, .saveForLaterLink:hover {
+  text-decoration: underline;
+  color: #C7511F;
+}
+
+.divider {
+  margin: 0 10px;
+  color: #DDD;
+  font-weight: 300;
+}
+
+/* PRICE ALIGNMENT (Far Right) */
+.itemPrice {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: right;
+  min-width: 100px;
+}
+
+/* RIGHT SIDE: SUMMARY BOX */
+.cartRight {
+  flex: 0.25;
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+  height: fit-content;
+}
+
+.cartRight h3 {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.checkoutBtn {
+  background-color: #FFD814;
+  border: none;
+  border-radius: 20px; /* Pill shape */
+  padding: 8px 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.3);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.checkoutBtn:hover {
+  background-color: #F7CA00;
+}
+
+/* EMPTY CART STATE */
+.emptyCart {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.emptyCart button {
+  background-color: #FFD814;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+}

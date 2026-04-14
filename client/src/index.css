@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #EAEDED;
+}
+
+/* Main container like Amazon */
+.container {
+  width: 90%;
+  margin: 20px auto;
+}
+
+/* Buttons */
+.btn {
+  background-color: #FFD814;
+  border: 1px solid #FCD200;
+  padding: 8px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #F7CA00;
+}
+
+/* Inputs */
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}

@@ -1,0 +1,18 @@
+.successBox {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  width: 350px;
+}
+
+.orderCard {
+  background: #f3f3f3;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+.orderCard h3 {
+  color: #B12704;
+}
