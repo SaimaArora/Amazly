@@ -14,6 +14,9 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("Amazon Clone Server is Running Live!");
+});
 
 app.use("/api/products", productRoutes);
 app.use("/api/cart", cartRoutes);
