@@ -11,6 +11,7 @@ function ProductDetail() {
   const [selectedImg, setSelectedImg] = useState("");
   const { addToCart } = useContext(CartContext);
 
+  // eslint-disable-next-line
   useEffect(() => {
     fetchProduct();
   }, []);
@@ -58,13 +59,14 @@ function ProductDetail() {
             <img
               key={i}
               src={img}
+              alt="thumbnail" 
               onClick={() => setSelectedImg(img)}
               className="thumb"
             />
           ))}
         </div>
 
-        <img src={selectedImg} className="mainImage" />
+        <img src={selectedImg} alt={product.name}  className="mainImage" />
       </div>
 
       {/* MIDDLE: DETAILS */}

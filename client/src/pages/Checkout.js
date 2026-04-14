@@ -60,7 +60,7 @@ function Checkout() {
 
           {cart.map((item) => (
             <div key={item.id} className="checkoutItem">
-              <img src={item.image} />
+              <img src={item.image} alt={item.name}  />
 
               <div>
                 <h4>{item.name}</h4>

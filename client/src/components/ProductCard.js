@@ -13,11 +13,13 @@ function ProductCard({ product }) {
 
       {/* CLICK IMAGE */}
       <Link to={`/product/${product.id}`}>
-        <img src={product.image} className="cardImg" />
+        <img src={product.image} alt={product.name} className="cardImg" />
       </Link>
 
       <h4 className="title">{product.name}</h4>
-
+        <p className="rating">
+        ⭐⭐⭐⭐☆ <span>(120)</span>
+        </p>
       <p className="price">₹{product.price}</p>
 
       {/* AMAZON STYLE BUTTON */}

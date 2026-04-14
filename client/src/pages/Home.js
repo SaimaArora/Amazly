@@ -11,6 +11,7 @@ function Home() {
   const searchParams = new URLSearchParams(location.search);
   const search = searchParams.get("search") || "";
 
+  // eslint-disable-next-line
   useEffect(() => {
     fetchProducts();
   }, [search]);
